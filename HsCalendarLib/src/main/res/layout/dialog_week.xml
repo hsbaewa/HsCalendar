@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/LinearLayoutContainer">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+
+
+            <Button
+                android:id="@+id/ButtonLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&lt;"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:textSize="20dp"
+                android:background="#0fff"
+                />
+            <!--
+            <android.support.v7.widget.CardView
+                android:id="@+id/CardViewLeft"
+                android:layout_width="wrap_content"
+                android:minWidth="40dp"
+                android:layout_height="wrap_content"
+                card_view:cardUseCompatPadding="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="&lt;"
+                        android:minHeight="40dp"
+                        android:gravity="center"
+                        />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/TextViewYear"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:minHeight="40dp"
+                android:minWidth="200dp" />
+
+            <!--
+            <android.support.v7.widget.CardView
+                android:id="@+id/CardViewRight"
+                android:layout_width="wrap_content"
+                android:minWidth="40dp"
+                android:layout_height="wrap_content"
+                card_view:cardUseCompatPadding="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="&gt;"
+                        android:minHeight="40dp"
+                        android:gravity="center"
+                        />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+-->
+            <Button
+                android:id="@+id/ButtonRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&gt;"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:textSize="20dp"
+                android:background="#0fff"
+                />
+        </LinearLayout>
+
+
+        <kr.co.hs.calendar.CustomViewPager
+            android:id="@+id/ViewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+        </kr.co.hs.calendar.CustomViewPager>
+    </LinearLayout>
+
+</LinearLayout>

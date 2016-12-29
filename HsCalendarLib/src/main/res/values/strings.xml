@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">HsCalendar</string>
+
+    <string name="Sunday">일</string>
+    <string name="Monday">월</string>
+    <string name="Tuesday">화</string>
+    <string name="Wednesday">수</string>
+    <string name="Thursday">목</string>
+    <string name="Friday">금</string>
+    <string name="Saturday">토</string>
+
+    <string name="Jan">1월</string>
+    <string name="Feb">2월</string>
+    <string name="Mar">3월</string>
+    <string name="Apr">4월</string>
+    <string name="May">5월</string>
+    <string name="Jun">6월</string>
+    <string name="Jul">7월</string>
+    <string name="Aug">8월</string>
+    <string name="Sep">9월</string>
+    <string name="Oct">10월</string>
+    <string name="Nov">11월</string>
+    <string name="Dec">12월</string>
+
+</resources>
