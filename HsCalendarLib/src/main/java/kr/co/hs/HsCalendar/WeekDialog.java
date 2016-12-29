@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -22,9 +23,11 @@ import java.util.Calendar;
 public class WeekDialog extends Dialog implements ViewPager.OnPageChangeListener, View.OnClickListener, WeekView.OnClickWeekListener{
 
     private WeekView.OnClickWeekListener mOnClickWeekListener;
+    private String title = null;
 
-    public WeekDialog(Context context) {
+    public WeekDialog(Context context, String title) {
         super(context);
+        this.title = title;
     }
 
     public WeekDialog(Context context, int themeResId) {
@@ -84,6 +87,16 @@ public class WeekDialog extends Dialog implements ViewPager.OnPageChangeListener
         lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
         lp.gravity = Gravity.CENTER;
         window.setAttributes(lp);
+
+        LinearLayout layoutTitle = (LinearLayout) findViewById(R.id.LayoutTitle);
+        TextView tvTitle = (TextView) findViewById(R.id.TextViewTitle);
+        if(this.title == null){
+            layoutTitle.setVisibility(View.GONE);
+        }else{
+            layoutTitle.setVisibility(View.VISIBLE);
+            tvTitle.setText(this.title);
+        }
+
 
     }
 

@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -18,13 +19,15 @@ import java.util.Calendar;
  */
 public class MonthDialog extends Dialog implements MonthView.OnClickMonthListener, View.OnClickListener, ViewPager.OnPageChangeListener{
 
+    private String title;
     private OnMonthSelectListener onMonthSelectListener;
     public interface OnMonthSelectListener{
         void onSelectMonth(int year, int month);
     }
 
-    public MonthDialog(Context context) {
+    public MonthDialog(Context context, String title) {
         super(context);
+        this.title = title;
     }
 
     public MonthDialog(Context context, int themeResId) {
@@ -69,6 +72,14 @@ public class MonthDialog extends Dialog implements MonthView.OnClickMonthListene
         mButtonRight.setOnClickListener(this);
 
 
+        LinearLayout layoutTitle = (LinearLayout) findViewById(R.id.LayoutTitle);
+        TextView tvTitle = (TextView) findViewById(R.id.TextViewTitle);
+        if(this.title == null){
+            layoutTitle.setVisibility(View.GONE);
+        }else{
+            layoutTitle.setVisibility(View.VISIBLE);
+            tvTitle.setText(this.title);
+        }
     }
 
     public void setOnMonthSelectListener(OnMonthSelectListener onMonthSelectListener){

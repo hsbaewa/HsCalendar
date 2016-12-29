@@ -12,6 +12,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -22,10 +23,12 @@ import java.util.Calendar;
  */
 public class DayDialog extends Dialog implements DayView.OnClickDayListener, ViewPager.OnPageChangeListener, View.OnClickListener{
 
+    private String title;
     private CalendarView.OnDateChangeListener onDateChangeListener;
 
-    public DayDialog(Context context) {
+    public DayDialog(Context context, String title) {
         super(context);
+        this.title = title;
     }
 
     public DayDialog(Context context, int themeResId) {
@@ -86,6 +89,15 @@ public class DayDialog extends Dialog implements DayView.OnClickDayListener, Vie
         lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
         lp.gravity = Gravity.CENTER;
         window.setAttributes(lp);
+
+        LinearLayout layoutTitle = (LinearLayout) findViewById(R.id.LayoutTitle);
+        TextView tvTitle = (TextView) findViewById(R.id.TextViewTitle);
+        if(this.title == null){
+            layoutTitle.setVisibility(View.GONE);
+        }else{
+            layoutTitle.setVisibility(View.VISIBLE);
+            tvTitle.setText(this.title);
+        }
     }
 
 
